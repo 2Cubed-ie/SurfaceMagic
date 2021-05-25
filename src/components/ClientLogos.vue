@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-wrap items-center justify-center gap-4  sm:flex-nowrap md:justify-between"
+    class="flex flex-wrap items-center gap-4  justify-evenly sm:flex-nowrap md:justify-between"
   >
     <div
       class="max-w-sm mb-4"

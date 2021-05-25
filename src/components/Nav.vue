@@ -17,14 +17,18 @@
             :to="`${node.path}`"
             >{{ node.label }}</g-link
           >
-          <span v-else class="inline-block font-semibold">{{
+          <span v-else class="inline-block mb-4 font-semibold md:mb-0">{{
             node.label
           }}</span>
           <ul v-if="node.childItems.edges.length" class="flex sub-menu">
-            <li v-for="sub in node.childItems.edges" :key="sub.node.id">
+            <li
+              class="mb-1 md:mb-0"
+              v-for="sub in node.childItems.edges"
+              :key="sub.node.id"
+            >
               <g-link
                 @click="menuIsOpen = false"
-                class="md:text-base whitespace-nowrap"
+                class="md:text-base md:whitespace-nowrap"
                 :to="`${sub.node.path}`"
                 >{{ sub.node.label }}</g-link
               >
@@ -36,7 +40,7 @@
       </nav>
       <div class="py-4 md:hidden">
         <MobileMenuToggle
-          class="ml-4"
+          class="relative z-50 ml-4"
           @click.native="menuIsOpen = !menuIsOpen"
           :menuIsOpen="menuIsOpen"
         />
@@ -104,7 +108,7 @@ export default {
 }
 @media (max-width: 768px) {
   .main-menu {
-    @apply mx-auto absolute left-0 top-0 z-20 mt-24 p-8 bg-white rounded w-full flex flex-col items-center transition-all duration-500;
+    @apply mx-auto absolute left-0 top-0 z-20 p-12 bg-white rounded w-full flex flex-col items-center transition-all duration-500;
     will-change: transform, opacity;
   }
   .main-menu a {
@@ -113,6 +117,7 @@ export default {
   .hide-mobile-menu {
     transform: translateY(-100vh);
     opacity: 0;
+    visibility: hidden;
   }
 }
 
