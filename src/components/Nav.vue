@@ -123,7 +123,7 @@ export default {
 
 @media (max-width: 767px) {
   .sub-menu {
-    @apply flex-col md:absolute bg-white overflow-hidden;
+    @apply flex-col md:absolute overflow-hidden;
     max-height: 0;
     transform: scaleY(0);
     transform-origin: top;
@@ -150,5 +150,15 @@ export default {
     transform: scaleY(1);
     transition: opacity 200ms ease-out, transform 200ms ease-out;
   }
+}
+.parent:after {
+  content: "";
+  background: url("../assets/images/icons/chevron-down-outline.svg");
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0px;
 }
 </style>
