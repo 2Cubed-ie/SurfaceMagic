@@ -134,6 +134,16 @@ export default {
     max-height: 1000px;
     transform: scaleY(1);
   }
+  .parent:after {
+    content: "";
+    background: url("../assets/images/icons/chevron-down-outline.svg");
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0px;
+  }
 }
 @media (min-width: 768px) {
   .sub-menu {
@@ -150,15 +160,5 @@ export default {
     transform: scaleY(1);
     transition: opacity 200ms ease-out, transform 200ms ease-out;
   }
-}
-.parent:after {
-  content: "";
-  background: url("../assets/images/icons/chevron-down-outline.svg");
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 0px;
 }
 </style>
