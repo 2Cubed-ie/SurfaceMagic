@@ -7,7 +7,11 @@
       v-for="({ logo }, index) in $static.wordPressPage.acf.ourClients"
       :key="index"
     >
-      <GImage :src="logo.imageDownloaded" />
+      <GImage
+        :src="logo.imageDownloaded"
+        :alt="logo.altText"
+        :title="logo.title"
+      />
     </div>
   </div>
 </template>
@@ -19,7 +23,9 @@ query {
     acf{
       ourClients{
         logo{
-          imageDownloaded(width: 140)
+          imageDownloaded(width: 140, height: 140, quality: 95)
+          title
+          altText
         }
       }
     }

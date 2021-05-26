@@ -48,7 +48,7 @@
         </p>
         <g-link to="/about-us" class="button">Find Out More</g-link>
       </div>
-      <g-image src="~/assets/images/about.jpg"></g-image>
+      <g-image src="~/assets/images/about.jpg" alt="Window repairs"></g-image>
     </section>
 
     <!-- SERVICES -->
