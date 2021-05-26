@@ -38,8 +38,9 @@
           <a
             href="https://ie.linkedin.com/company/surface-magic-ireland"
             target="_blank"
-            rel="nofollow"
+            rel="noopener"
             class="mr-4"
+            aria-label="Linkedin"
             ><svg
               aria-hidden="true"
               focusable="false"
@@ -57,7 +58,8 @@
           <a
             href="https://www.facebook.com/SurfaceMagicIreland/"
             target="_blank"
-            rel="nofollow"
+            rel="noopener"
+            aria-label="Facebook"
             ><svg
               enable-background="new 0 0 24 24"
               height="24"
