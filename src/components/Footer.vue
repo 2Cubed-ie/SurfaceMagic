@@ -6,6 +6,10 @@
           ><g-image
             class="inline-block"
             src="~/assets/images/logo.png"
+            width="140"
+            height="81"
+            alt="Surface Magic Logo"
+            title="Surface Magic Logo"
           ></g-image
         ></g-link>
       </div>

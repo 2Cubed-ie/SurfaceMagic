@@ -7,6 +7,8 @@
           src="../assets/images/logo.png"
           width="140"
           height="81"
+          alt="Surface Magic Logo"
+          title="Surface Magic Logo"
         />
       </g-link>
       <div class="flex flex-wrap justify-end">
