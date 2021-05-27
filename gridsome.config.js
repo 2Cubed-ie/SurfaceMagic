@@ -58,15 +58,15 @@ module.exports = {
 
         // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
         manifestPath: "manifest.json",
-        title: "WooGridsome",
+        title: "Surface Magic",
         startUrl: "/",
         display: "standalone",
         statusBarStyle: "default",
-        themeColor: "#666600",
+        themeColor: "#25508c",
         backgroundColor: "#ffffff",
         icon: "./src/favicon.png", // must be provided like 'src/favicon.png'
-        shortName: "WooGridsome", // Optional
-        description: "Full featured WordPress started for Gridsome!", // Optional
+        shortName: "Surface Magic", // Optional
+        description: "Surface Magic are Ireland's Number One Surface Repair", // Optional
         categories: ["development"], // Optional
         lang: "en-GB", // Optional
         dir: "auto", // Optional
@@ -77,17 +77,17 @@ module.exports = {
         // svgFavicon: 'favicon.svg', // Optional. Requires favicon.ico fallback
 
         // Microsoft Windows Meta Tags
-        msTileColor: "#666600", // Optional
+        msTileColor: "#25508c", // Optional
 
         // Apple MacOS Meta Tags
         appleMaskIcon: "src/favicon.png", // Optional
-        appleMaskIconColor: "#666600", // Optional
+        appleMaskIconColor: "#25508c", // Optional
       },
     },
   ],
   templates: {
-    WordPressPost: "/post/:slug",
+    // WordPressPost: "/post/:slug",
     WordPressSector: "/sector/:slug",
-    WordPressCategory: "/category/:slug",
+    // WordPressCategory: "/category/:slug",
   },
 };
