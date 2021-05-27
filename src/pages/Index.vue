@@ -46,7 +46,13 @@
         </p>
         <g-link to="/about-us" class="button">Find Out More</g-link>
       </div>
-      <g-image src="~/assets/images/about.jpg" alt="Window repairs"></g-image>
+      <GImage
+        src="~/assets/images/about.jpg"
+        width="558"
+        height="454"
+        alt="Window repairs"
+        quality="95"
+      />
     </section>
 
     <!-- SERVICES -->
@@ -100,23 +106,20 @@ query {
   }
 }
 </static-query>
+
 <script>
-import ServiceCards from "../components/ServiceCards";
-import ClientLogos from "../components/ClientLogos";
 import SmallNav from "../components/SmallNav";
-import ContactForm from "../components/ContactForm";
-import IconBanner from "../components/IconBanner";
 
 export default {
   created() {
     this.fetchMetaDatas(this.$static.wordPressPage.yoastHead);
   },
   components: {
-    ServiceCards,
-    ClientLogos,
     SmallNav,
-    ContactForm,
-    IconBanner,
+    ServiceCards: () => import("../components/ServiceCards"),
+    ContactForm: () => import("../components/ContactForm"),
+    IconBanner: () => import("../components/IconBanner"),
+    ClientLogos: () => import("../components/ClientLogos"),
   },
 };
 </script>
