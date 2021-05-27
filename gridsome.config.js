@@ -86,8 +86,8 @@ module.exports = {
     },
   ],
   templates: {
-    // WordPressPost: "/post/:slug",
+    WordPressPost: "/post/:slug",
     WordPressSector: "/sector/:slug",
-    // WordPressCategory: "/category/:slug",
+    WordPressCategory: "/category/:slug",
   },
 };
