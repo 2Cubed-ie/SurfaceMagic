@@ -6,12 +6,13 @@
     :height="img.size.height"
     :srcset="img.srcset"
     :sizes="img.sizes"
-    class="g-image g-image--lazy g-image--loading"
+    :class="scClass"
+    loading="lazy"
   />
 </template>
 
 <script>
 export default {
-  props: ["img", "alt"],
+  props: ["img", "alt", "scClass"],
 };
 </script>

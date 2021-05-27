@@ -12,7 +12,7 @@
         fit="cover"
       /> -->
       <SCImage
-        class="w-full overflow-hidden hero"
+        :scClass="'w-full overflow-hidden hero'"
         :img="$static.wordPressPage.featuredMedia.imageDownloaded"
         :alt="$static.wordPressPage.featuredMedia.altText"
       />
@@ -62,7 +62,7 @@
         quality="95"
       /> -->
       <SCImage
-        class="w-full overflow-hidden hero"
+        :scClass="'w-full overflow-hidden hero'"
         :img="$static.wordPressPage.acf.aboutImage.imageDownloaded"
         :alt="$static.wordPressPage.acf.aboutImage.altText"
       />
