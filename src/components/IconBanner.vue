@@ -1,5 +1,5 @@
 <template>
-  <section class="text-white bg-primary block-bg">
+  <section class="text-whit block-bg">
     <div
       class="container flex flex-col items-center gap-4 py-12  md:flex-row justify-evenly"
     >
@@ -79,6 +79,6 @@
 
 <style scoped>
 .block-bg {
-  background: url("../assets/images/block-bg.jpg");
+  background: #1e74cf url("../assets/images/block-bg.jpg");
 }
 </style>

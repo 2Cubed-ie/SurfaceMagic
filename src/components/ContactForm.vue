@@ -10,24 +10,43 @@
     </p>
     <div>
       <label for="name">Name *</label>
-      <input type="text" name="name" required v-model="formData.name" />
+      <input
+        id="name"
+        type="text"
+        name="name"
+        required
+        v-model="formData.name"
+      />
     </div>
     <div>
       <label for="email">Email *</label>
-      <input type="email" name="email" required v-model="formData.email" />
+      <input
+        id="email"
+        type="email"
+        name="email"
+        required
+        v-model="formData.email"
+      />
     </div>
     <div>
       <label for="phone">Phone</label>
-      <input type="tel" name="phone" v-model="formData.phone" />
+      <input id phone type="tel" name="phone" v-model="formData.phone" />
     </div>
     <div>
       <label for="subject">Subject *</label>
-      <input type="text" name="subject" required v-model="formData.subject" />
+      <input
+        id="subject"
+        type="text"
+        name="subject"
+        required
+        v-model="formData.subject"
+      />
     </div>
 
     <div class="mb-4 col-span-full">
       <label for="message">Message *</label>
       <textarea
+        id="message"
         required
         class="block w-full"
         name="message"
@@ -38,7 +57,7 @@
 
     <button
       type="submit"
-      class="inline-block p-2 cursor-pointer bg-primary-dark hover:bg-white hover:text-primary-dark"
+      class="inline-block p-2 cursor-pointer  bg-primary-dark hover:bg-white hover:text-primary-dark"
     >
       Submit
     </button>

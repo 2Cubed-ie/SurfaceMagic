@@ -7,7 +7,6 @@
         :title="$static.wordPressPage.featuredMedia.title"
         :alt="$static.wordPressPage.featuredMedia.altText"
         fit="cover"
-        immediate
       />
 
       <div class="absolute top-0 flex items-center w-full h-full">
