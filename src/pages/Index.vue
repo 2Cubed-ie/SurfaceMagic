@@ -54,12 +54,17 @@
         </p>
         <g-link to="/about-us" class="button">Find Out More</g-link>
       </div>
-      <GImage
+      <!-- <GImage
         src="~/assets/images/about.jpg"
         width="558"
         height="454"
         alt="Window repairs"
         quality="95"
+      /> -->
+      <SCImage
+        class="w-full overflow-hidden hero"
+        :img="$static.wordPressPage.acf.aboutImage.imageDownloaded"
+        :alt="$static.wordPressPage.acf.aboutImage.altText"
       />
     </section>
 
@@ -110,6 +115,10 @@ query {
     acf{
       heroTitle
       heroIntro
+      aboutImage{
+        imageDownloaded
+        altText
+      }
     }
   }
 }
