@@ -1,12 +1,20 @@
 <template>
   <Layout>
+    <!-- <pre class="p-8 my-4 text-sm text-white bg-gray-800">{{
+      $static.wordPressPage.featuredMedia.imageDownloaded
+    }}</pre> -->
     <section class="relative hero bg-primary-dark">
-      <GImage
+      <!-- <GImage
         class="w-full overflow-hidden hero"
         :src="$static.wordPressPage.featuredMedia.imageDownloaded"
         :title="$static.wordPressPage.featuredMedia.title"
         :alt="$static.wordPressPage.featuredMedia.altText"
         fit="cover"
+      /> -->
+      <SCImage
+        class="w-full overflow-hidden hero"
+        :img="$static.wordPressPage.featuredMedia.imageDownloaded"
+        :alt="$static.wordPressPage.featuredMedia.altText"
       />
 
       <div class="absolute top-0 flex items-center w-full h-full">
@@ -109,6 +117,7 @@ query {
 
 <script>
 import SmallNav from "../components/SmallNav";
+import SCImage from "../components/SCImage";
 
 export default {
   created() {
@@ -116,6 +125,7 @@ export default {
   },
   components: {
     SmallNav,
+    SCImage,
     ServiceCards: () => import("../components/ServiceCards"),
     ContactForm: () => import("../components/ContactForm"),
     IconBanner: () => import("../components/IconBanner"),
