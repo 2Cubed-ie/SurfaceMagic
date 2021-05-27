@@ -17,11 +17,10 @@
             <h2
               class="max-w-lg mb-4 text-3xl font-bold md:text-4xl xl:text-5xl"
             >
-              Surface Magic Are Ireland’s Number One Surface Repair
+              {{ $static.wordPressPage.acf.heroTitle }}
             </h2>
             <p class="max-w-lg mb-12">
-              Get in touch with us today to see how we can help you. We cover
-              nationwide and operate across multiple sectors.
+              {{ $static.wordPressPage.acf.heroIntro }}
             </p>
             <g-link class="text-lg button" to="/contact">Contact Us</g-link>
           </div>
@@ -94,6 +93,10 @@ query {
       imageDownloaded (width: 1920, height: 645, quality: 95)
       title
       altText
+    }
+    acf{
+      heroTitle
+      heroIntro
     }
   }
 }

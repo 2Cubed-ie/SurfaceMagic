@@ -4,12 +4,13 @@
       <div class="w-full mb-12 text-center md:w-auto">
         <g-link to="/"
           ><g-image
-            class="inline-block"
+            class="inline-block g-image"
             src="~/assets/images/logo.png"
             width="140"
             height="81"
             alt="Surface Magic Logo"
             title="Surface Magic Logo"
+            loading="lazy"
           ></g-image
         ></g-link>
       </div>
