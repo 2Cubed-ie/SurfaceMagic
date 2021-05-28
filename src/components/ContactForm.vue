@@ -30,7 +30,7 @@
     </div>
     <div>
       <label for="phone">Phone</label>
-      <input id phone type="tel" name="phone" v-model="formData.phone" />
+      <input id="phone" type="tel" name="phone" v-model="formData.phone" />
     </div>
     <div>
       <label for="subject">Subject *</label>
