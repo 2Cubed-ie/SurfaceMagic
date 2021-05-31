@@ -4,7 +4,7 @@
       :pageTitle="$page.wordPressSector.title"
       :style="{
         backgroundImage: this.$page.wordPressSector.featuredMedia
-          ? `url(${this.$page.wordPressSector.featuredMedia.imageDownloaded.src})`
+          ? `url(${this.$page.wordPressSector.featuredMedia.downloaded.src})`
           : ``,
       }"
       class="bg-cover"
@@ -26,7 +26,7 @@
     >
       <ul class="grid grid-cols-2 gap-8">
         <li v-for="item in $page.wordPressSector.acf.gallery" :key="item.key">
-          <g-image :src="item.imageDownloaded"></g-image>
+          <g-image :src="item.downloaded"></g-image>
         </li>
       </ul>
     </section>
@@ -59,12 +59,12 @@ query Sector($path: String!) {
     content
     yoastHead
     featuredMedia{
-      imageDownloaded
+      downloaded
     }
     acf{
       gallery{
         id
-        imageDownloaded
+        downloaded
       }
     }
   }

@@ -5,7 +5,7 @@
   >
     <g-image
       v-if="node.featuredMedia"
-      :src="node.featuredMedia.imageDownloaded"
+      :src="node.featuredMedia.downloaded"
       class="object-cover w-full h-200 rounded-t-md"
     ></g-image>
     <g-image
@@ -15,26 +15,14 @@
     ></g-image>
     <div class="flex flex-col p-4">
       <h2
-        class="mb-2 overflow-scroll leading-tight whitespace-nowrap hide-scrollbar"
+        class="mb-2 overflow-scroll leading-tight  whitespace-nowrap hide-scrollbar"
       >
         {{ node.title }}
       </h2>
       <p
-        class="flex-1 mb-3 text-sm font-light leading-tight text-gray-500 line-clamp-3"
+        class="flex-1 mb-3 text-sm font-light leading-tight text-gray-500  line-clamp-3"
         v-html="node.excerpt"
       ></p>
-      <div
-        v-if="categories"
-        class="flex w-full gap-2 mt-2 overflow-scroll whitespace-nowrap hide-scrollbar"
-      >
-        <span v-for="node in categories" :key="node.slug">
-          <g-link
-            class="inline-block p-1 px-3 text-xs text-indigo-700 rounded-full bg-indigo-50 dark:bg-indigo-500"
-            :to="`/category/${node.slug}`"
-            >{{ node.title }}</g-link
-          >
-        </span>
-      </div>
     </div>
   </g-link>
 </template>

@@ -3,7 +3,7 @@
     <section class="relative hero bg-primary-dark">
       <GImage
         class="w-full overflow-hidden hero"
-        :src="$static.wordPressPage.featuredMedia.imageDownloaded"
+        :src="$static.wordPressPage.featuredMedia.downloaded"
         :title="$static.wordPressPage.featuredMedia.title"
         :alt="$static.wordPressPage.featuredMedia.altText"
         blur="10"
@@ -96,7 +96,7 @@ query {
     yoastHead
     title
     featuredMedia{
-      imageDownloaded (width: 1920, height: 645, quality: 95)
+      downloaded (width: 1920, height: 645, quality: 95)
       title
       altText
     }
@@ -104,7 +104,7 @@ query {
       heroTitle
       heroIntro
       aboutImage{
-        imageDownloaded
+        downloaded
         altText
       }
     }

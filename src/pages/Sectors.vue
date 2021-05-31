@@ -4,7 +4,7 @@
       :pageTitle="$static.wordPressPage.title"
       :style="{
         backgroundImage: this.$static.wordPressPage.featuredMedia
-          ? `url(${this.$static.wordPressPage.featuredMedia.imageDownloaded.src})`
+          ? `url(${this.$static.wordPressPage.featuredMedia.downloaded.src})`
           : ``,
       }"
       class="bg-cover"
@@ -20,7 +20,7 @@ query {
     title
     yoastHead
     featuredMedia{
-      imageDownloaded
+      downloaded
     }
   }
 }

@@ -8,7 +8,7 @@
       :key="index"
     >
       <GImage
-        :src="logo.imageDownloaded"
+        :src="logo.downloaded"
         :alt="logo.altText"
         :title="logo.title"
       />
@@ -23,7 +23,7 @@ query {
     acf{
       ourClients{
         logo{
-          imageDownloaded(width: 140, height: 140, quality: 95)
+          downloaded(width: 140, height: 140, quality: 95)
           title
           altText
         }

@@ -26,12 +26,7 @@ query($page: Int) {
         slug
         featuredMedia {
           sourceUrl
-          imageDownloaded
-        }
-        categories {
-          title
-          id
-          slug
+          downloaded
         }
       }
     }

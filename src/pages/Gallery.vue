@@ -4,7 +4,7 @@
       :pageTitle="$static.wordPressPage.title"
       :style="{
         backgroundImage: this.$static.wordPressPage.featuredMedia
-          ? `url(${this.$static.wordPressPage.featuredMedia.imageDownloaded.src})`
+          ? `url(${this.$static.wordPressPage.featuredMedia.downloaded.src})`
           : ``,
       }"
       class="bg-cover"
@@ -30,7 +30,7 @@
           v-for="(item, index) in $static.wordPressPage.acf.gallery"
           :key="item.id"
         >
-          <GImage @click="openGallery(index)" :src="item.imageDownloaded" />
+          <GImage @click="openGallery(index)" :src="item.downloaded" />
         </li>
       </ul>
     </section>
@@ -52,12 +52,12 @@ query {
     yoastHead
     title
     featuredMedia{
-      imageDownloaded
+      downloaded
     }
     acf{
       gallery{
         caption
-        imageDownloaded
+        downloaded
       }
     }
   }
@@ -78,7 +78,7 @@ export default {
     media() {
       return this.$static.wordPressPage.acf.gallery.map((item) => {
         return {
-          src: item.imageDownloaded.src,
+          src: item.downloaded.src,
           caption: item.caption,
         };
       });

@@ -12,13 +12,17 @@ module.exports = {
   },
   plugins: [
     {
-      use: "@gridsome/source-wordpress",
+      use: "@travisreynolds/gridsome-source-wordpress",
       options: {
         baseUrl: process.env.WORDPRESS_URL, // required
         apiBase: "wp-json",
         typeName: "WordPress",
         perPage: 100,
         concurrent: 10,
+        images: {
+          original: true,
+          cache: true,
+        },
       },
     },
     {
@@ -36,16 +40,16 @@ module.exports = {
       },
     },
     { use: "gridsome-plugin-tailwindcss" },
-    {
-      use: "@noxify/gridsome-plugin-remote-image",
-      options: {
-        original: true,
-        typeName: "WordPressAttachment",
-        sourceField: "sourceUrl",
-        targetField: "imageDownloaded",
-        targetPath: "./images/remoteImages",
-      },
-    },
+    // {
+    //   use: "@noxify/gridsome-plugin-remote-image",
+    //   options: {
+    //     original: true,
+    //     typeName: "WordPressAttachment",
+    //     sourceField: "sourceUrl",
+    //     targetField: "downloaded",
+    //     targetPath: "./images/remoteImages",
+    //   },
+    // },
 
     {
       use: "gridsome-plugin-pwa",
@@ -88,6 +92,5 @@ module.exports = {
   templates: {
     WordPressPost: "/post/:slug",
     WordPressSector: "/sector/:slug",
-    WordPressCategory: "/category/:slug",
   },
 };

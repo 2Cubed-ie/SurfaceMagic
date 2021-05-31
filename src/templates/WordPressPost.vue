@@ -3,19 +3,19 @@
     <article class="content">
       <div
         v-if="$page.wordPressPost.featuredMedia"
-        class="w-full -mb-24 bg-center bg-cover h-90vh featured-image shadow-custom"
+        class="w-full -mb-24 bg-center bg-cover  h-90vh featured-image shadow-custom"
         :style="{
-          backgroundImage: `url(${$page.wordPressPost.featuredMedia.imageDownloaded.src})`,
+          backgroundImage: `url(${$page.wordPressPost.featuredMedia.downloaded.src})`,
         }"
       ></div>
       <div
-        class="z-10 w-full max-w-5xl px-8 py-4 mx-auto -mt-12 bg-white border-b border-indigo-200 shadow-lg dark:bg-gray-800 dark:border-gray-800"
+        class="z-10 w-full max-w-5xl px-8 py-4 mx-auto -mt-12 bg-white border-b border-indigo-200 shadow-lg  dark:bg-gray-800 dark:border-gray-800"
       >
         <h1 class="px-8 mx-auto my-12 text-4xl leading-none text-center">
           {{ $page.wordPressPost.title }}
         </h1>
         <div
-          class="px-8 py-4 m-auto mt-8 font-light prose post-content dark:text-gray-100 max-w-none"
+          class="px-8 py-4 m-auto mt-8 font-light prose  post-content dark:text-gray-100 max-w-none"
           v-html="$page.wordPressPost.content"
         ></div>
       </div>
@@ -30,17 +30,12 @@ query Post($id: ID!) {
     content
     featuredMedia {
       sourceUrl
-      imageDownloaded
+      downloaded
       altText
       title
       mediaDetails {
         width
       }
-    }
-    categories {
-      id
-      slug
-      title
     }
   }
   post(id: $id, idType: DATABASE_ID) {

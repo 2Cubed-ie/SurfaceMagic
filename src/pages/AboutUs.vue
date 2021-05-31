@@ -3,7 +3,7 @@
     <PageTitle
       pageTitle="About Surface Magic"
       :style="{
-        'background-image': `url(${$static.wordPressPage.featuredMedia.imageDownloaded.src})`,
+        'background-image': `url(${$static.wordPressPage.featuredMedia.downloaded.src})`,
       }"
       class="bg-cover"
     />
@@ -92,7 +92,7 @@ query {
   wordPressPage(id: "12"){
     yoastHead
     featuredMedia{
-      imageDownloaded
+      downloaded
     }
   }
 }
