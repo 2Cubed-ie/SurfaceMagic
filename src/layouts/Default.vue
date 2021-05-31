@@ -53,12 +53,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 a,
 button {
   cursor: pointer;
   outline: none !important;
+}
+
+/* Better image rendering */
+@media (min-width: 768px) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
 }
 
 .button {
