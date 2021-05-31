@@ -28,22 +28,15 @@
               Bathroom <br />Repairs
             </h2>
           </div>
-          <p class="max-w-lg text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p
+            class="max-w-lg text-gray-700"
+            v-html="$static.wordPressPage.acf.bathroomRepairsInfo"
+          ></p>
         </div>
         <GImage
           class="w-full md:w-1/2"
-          src="~/assets/images/bathroom-repairs.jpg"
-          alt="Bathroom Repairs"
-          width="574"
-          height="420"
+          :src="$static.wordPressPage.acf.bathroomRepairsImage.downloaded"
+          :alt="$static.wordPressPage.acf.bathroomRepairsImage.altText"
         />
       </div>
     </section>
@@ -54,9 +47,8 @@
       >
         <GImage
           class="w-full md:w-1/2"
-          src="~/assets/images/floor.jpg"
-          width="574"
-          height="420"
+          :src="$static.wordPressPage.acf.flooringRepairsImage.downloaded"
+          :alt="$static.wordPressPage.acf.flooringRepairsImage.altText"
         />
         <div class="md:ml-auto">
           <div class="flex items-center mb-8">
@@ -72,15 +64,10 @@
               Flooring <br />Repairs
             </h2>
           </div>
-          <p class="max-w-lg text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p
+            class="max-w-lg text-gray-700"
+            v-html="$static.wordPressPage.acf.flooringRepairsInfo"
+          ></p>
         </div>
       </div>
     </section>
@@ -103,22 +90,15 @@
               Window <br />Repairs
             </h2>
           </div>
-          <p class="max-w-lg text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p
+            class="max-w-lg text-gray-700"
+            v-html="$static.wordPressPage.acf.windowRepairsInfo"
+          ></p>
         </div>
         <GImage
-          alt="Window Repairs"
           class="w-full md:w-1/2"
-          src="~/assets/images/window.jpg"
-          width="574"
-          height="420"
+          :src="$static.wordPressPage.acf.windowRepairsImage.downloaded"
+          :alt="$static.wordPressPage.acf.windowRepairsImage.altText"
         />
       </div>
     </section>
@@ -128,11 +108,11 @@
         class="flex flex-col items-center justify-between gap-8  md:flex-nowrap md:flex-row"
       >
         <GImage
-          alt="Worktop and Kithen Repairs"
           class="w-full md:w-1/2"
-          src="~/assets/images/kitchen.jpg"
-          width="574"
-          height="420"
+          :src="
+            $static.wordPressPage.acf.worktopAndKitchenRepairsImage.downloaded
+          "
+          :alt="$static.wordPressPage.acf.worktopAndKitchenRepairsImage.altText"
         />
         <div class="md:ml-auto">
           <div class="flex items-center mb-8">
@@ -148,15 +128,10 @@
               Worktop & <br />Kitchen Repairs
             </h2>
           </div>
-          <p class="max-w-lg text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p
+            class="max-w-lg text-gray-700"
+            v-html="$static.wordPressPage.acf.worktopAndKitchenRepairsInfo"
+          ></p>
         </div>
       </div>
     </section>
@@ -179,22 +154,15 @@
               Door <br />Repairs
             </h2>
           </div>
-          <p class="max-w-lg text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p
+            class="max-w-lg text-gray-700"
+            v-html="$static.wordPressPage.acf.doorRepairsInfo"
+          ></p>
         </div>
         <GImage
-          alt="Door Repairs"
           class="w-full md:w-1/2"
-          src="~/assets/images/door.jpg"
-          width="574"
-          height="420"
+          :src="$static.wordPressPage.acf.doorRepairsImage.downloaded"
+          :alt="$static.wordPressPage.acf.doorRepairsImage.altText"
         />
       </div>
     </section>
@@ -204,11 +172,13 @@
         class="flex flex-col items-center justify-between gap-8  md:flex-nowrap md:flex-row"
       >
         <GImage
-          alt="Brick, Stone and Marble repairs"
           class="w-full md:w-1/2"
-          src="~/assets/images/brick.jpg"
-          width="574"
-          height="420"
+          :src="
+            $static.wordPressPage.acf.brickStoneAndMarbleRepairsImage.downloaded
+          "
+          :alt="
+            $static.wordPressPage.acf.brickStoneAndMarbleRepairsImage.altText
+          "
         />
         <div class="md:ml-auto">
           <div class="flex items-center mb-8">
@@ -224,16 +194,42 @@
               Brick, Stone & <br />Marble Repairs
             </h2>
           </div>
-          <p class="max-w-lg text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p
+            class="max-w-lg text-gray-700"
+            v-html="$static.wordPressPage.acf.brickStoneAndMarbleRepairsInfo"
+          ></p>
         </div>
+      </div>
+    </section>
+
+    <section class="container my-20">
+      <div
+        class="flex flex-col-reverse items-center justify-between gap-8  md:flex-nowrap md:flex-row"
+      >
+        <div>
+          <div class="flex items-center mb-8">
+            <img
+              width="64"
+              height="64"
+              src="../assets/images/icons/spray.svg"
+              alt="UPVC Spraying Icon"
+              class="inline-block mr-8"
+              loading="lazy"
+            />
+            <h2 class="text-3xl font-bold text-primary-dark">
+              UPVC <br />Spraying
+            </h2>
+          </div>
+          <p
+            class="max-w-lg text-gray-700"
+            v-html="$static.wordPressPage.acf.upvcSprayingInfo"
+          ></p>
+        </div>
+        <GImage
+          class="w-full md:w-1/2"
+          :src="$static.wordPressPage.acf.upvcSprayingImage.downloaded"
+          :alt="$static.wordPressPage.acf.upvcSprayingImage.altText"
+        />
       </div>
     </section>
   </Layout>
@@ -247,6 +243,43 @@ query {
     featuredMedia{
       downloaded
     }
+    acf{
+        bathroomRepairsInfo
+        bathroomRepairsImage{
+          downloaded (width: 574, height: 420, quality: 95)
+          altText
+        }
+        flooringRepairsInfo
+        flooringRepairsImage{
+          downloaded (width: 574, height: 420, quality: 95)
+          altText
+        }
+        windowRepairsInfo
+        windowRepairsImage{
+          downloaded (width: 574, height: 420, quality: 95)
+          altText
+        }
+        worktopAndKitchenRepairsInfo
+        worktopAndKitchenRepairsImage{
+          downloaded (width: 574, height: 420, quality: 95)
+          altText
+        }
+        doorRepairsInfo
+        doorRepairsImage{
+          downloaded (width: 574, height: 420, quality: 95)
+          altText
+        }
+        brickStoneAndMarbleRepairsInfo
+        brickStoneAndMarbleRepairsImage{
+          downloaded (width: 574, height: 420, quality: 95)
+          altText
+        }
+        upvcSprayingInfo
+        upvcSprayingImage{
+          downloaded (width: 574, height: 420, quality: 95)
+          altText
+        }
+      }
   }
 }
 </static-query>

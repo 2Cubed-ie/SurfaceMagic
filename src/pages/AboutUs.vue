@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <PageTitle
-      pageTitle="About Surface Magic"
+      :pageTitle="$static.wordPressPage.title"
       :style="{
         'background-image': `url(${$static.wordPressPage.featuredMedia.downloaded.src})`,
       }"
@@ -12,24 +12,11 @@
     <section class="container grid items-center gap-8 my-12 md:grid-cols-2">
       <div>
         <h2 class="mb-2 text-xl font-bold text-primary">ABOUT US</h2>
-        <h3 class="max-w-md mb-8 text-3xl font-semibold text-primary-dark">
-          Surface Magic Are Experts In Surface Repair
-        </h3>
-        <p class="max-w-md mb-8">
-          Surface Magic are Ireland’s No.1 surface repair company. Our
-          specialist technicians have the ability to repair many types of
-          surfaces, carefully re-creating pattern, colour, shape and finish,
-          helping clients save on time, cost of replacements and stops waste
-          that will end up in landfill.
-        </p>
-        <p class="max-w-md mb-8">
-          Surface Magic services all industries, whether its Construction,
-          Healthcare, Hospitality, Insurance, Retail or Domestic. Our nationwide
-          coverage ensures all our clients can Save Time, Save Money and Save
-          the Environment. Surface Magic has worked on some major projects
-          around Ireland and is the preferred Surface Repair Specialists to most
-          companies.
-        </p>
+        <h3
+          class="max-w-md mb-8 text-3xl font-semibold text-primary-dark"
+          v-html="$static.wordPressPage.acf.subTitle"
+        ></h3>
+        <p class="max-w-md mb-8" v-html="$static.wordPressPage.content"></p>
         <p class="text-primary">
           <g-link to="/contact" class="underline">Get in touch today</g-link>,
           you won’t know if you don’t ask.
@@ -45,11 +32,9 @@
           Meet the Team
         </h3>
         <GImage
-          src="~/assets/images/meet-the-team.jpg"
-          alt="Meet the team"
-          title="Meet the Team"
-          width="1140"
-          height="445"
+          :src="$static.wordPressPage.acf.teamImage.downloaded"
+          :alt="$static.wordPressPage.acf.teamImage.altText"
+          :title="$static.wordPressPage.acf.teamImage.altText"
           class="w-full"
         />
       </div>
@@ -91,8 +76,17 @@
 query {
   wordPressPage(id: "12"){
     yoastHead
+    title
+    content
     featuredMedia{
       downloaded
+    }
+    acf{
+      teamImage{
+        downloaded (width: 1140, height: 445, quality: 95)
+      	altText
+      }
+      subTitle
     }
   }
 }
