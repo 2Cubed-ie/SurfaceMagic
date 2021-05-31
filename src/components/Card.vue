@@ -1,28 +1,29 @@
 <template>
   <g-link
     :to="`/post/${node.slug}`"
-    class="block bg-white border-b border-gray-300 rounded-md shadow-lg"
+    class="block bg-white border-b border-gray-300 shadow-md"
   >
     <g-image
       v-if="node.featuredMedia"
       :src="node.featuredMedia.downloaded"
-      class="object-cover w-full h-200 rounded-t-md"
+      class="object-cover w-full h-200"
     ></g-image>
     <g-image
       v-else
       src="~/assets/images/no-img-found.jpg"
-      class="object-cover w-full h-200 rounded-t-md"
+      class="object-cover w-full h-200"
     ></g-image>
-    <div class="flex flex-col p-4">
+    <div class="flex flex-col items-start p-4">
       <h2
         class="mb-2 overflow-scroll leading-tight  whitespace-nowrap hide-scrollbar"
       >
         {{ node.title }}
       </h2>
       <p
-        class="flex-1 mb-3 text-sm font-light leading-tight text-gray-500  line-clamp-3"
+        class="flex-1 mb-8 text-sm font-light leading-tight text-gray-500  line-clamp-3"
         v-html="node.excerpt"
       ></p>
+      <g-link :to="`/post/${node.slug}`" class="button">Read More</g-link>
     </div>
   </g-link>
 </template>

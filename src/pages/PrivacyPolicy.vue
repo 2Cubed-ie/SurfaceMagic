@@ -10,14 +10,20 @@
       class="bg-cover"
     />
 
-    <section></section>
+    <section class="container my-12">
+      <div
+        class="prose prose-blue max-w-none"
+        v-html="$static.wordPressPage.content"
+      ></div>
+    </section>
   </Layout>
 </template>
 
 <static-query>
 query {
-  wordPressPage(id: "16"){
+  wordPressPage(id: "3"){
     title
+    content
     yoastHead
     featuredMedia{
       downloaded

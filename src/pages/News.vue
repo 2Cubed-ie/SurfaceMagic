@@ -1,6 +1,14 @@
 <template>
   <Layout>
-    <PageTitle pageTitle="News" class="-mb-6" />
+    <PageTitle
+      :pageTitle="$page.wordPressPage.title"
+      :style="{
+        backgroundImage: this.$page.wordPressPage.featuredMedia
+          ? `url(${this.$page.wordPressPage.featuredMedia.downloaded.src})`
+          : ``,
+      }"
+      class="bg-cover"
+    />
     <div class="px-4 pt-10 mx-auto my-8 max-w-7xl md:p-8">
       <PostGrid :posts="$page.allWordPressPost.edges" />
       <Pager
@@ -29,6 +37,13 @@ query($page: Int) {
           downloaded
         }
       }
+    }
+  }
+  wordPressPage(id: "20"){
+    title
+    yoastHead
+    featuredMedia{
+      downloaded
     }
   }
 }
