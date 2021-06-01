@@ -40,34 +40,34 @@ module.exports = {
       },
     },
     { use: "gridsome-plugin-tailwindcss" },
-    {
-      use: "gridsome-plugin-pwa",
-      options: {
-        // Service Worker Options
-        disableServiceWorker: false,
-        serviceWorkerPath: "service-worker.js",
-        cachedFileTypes: "js,json,css,html,png,jpg,jpeg,svg,gif",
-        disableTemplatedUrls: true, // Optional
-        manifestPath: "manifest.json",
-        title: "Surface Magic",
-        startUrl: "/",
-        display: "standalone",
-        statusBarStyle: "default",
-        themeColor: "#25508c",
-        backgroundColor: "#ffffff",
-        icon: "./src/favicon.png", // must be provided like 'src/favicon.png'
-        shortName: "Surface Magic", // Optional
-        description: "Surface Magic are Ireland's Number One Surface Repair", // Optional
-        categories: ["development"], // Optional
-        lang: "en-GB", // Optional
-        dir: "auto", // Optional
-        maskableIcon: true, // Optional
-        gcmSenderId: undefined, // Optional
-        msTileColor: "#25508c", // Optional
-        appleMaskIcon: "src/favicon.png", // Optional
-        appleMaskIconColor: "#25508c", // Optional
-      },
-    },
+    // {
+    //   use: "gridsome-plugin-pwa",
+    //   options: {
+    //     // Service Worker Options
+    //     disableServiceWorker: false,
+    //     serviceWorkerPath: "service-worker.js",
+    //     cachedFileTypes: "js,json,css,html,png,jpg,jpeg,svg,gif",
+    //     // disableTemplatedUrls: false, // Optional
+    //     manifestPath: "manifest.json",
+    //     title: "Surface Magic",
+    //     startUrl: "/",
+    //     display: "standalone",
+    //     statusBarStyle: "default",
+    //     themeColor: "#25508c",
+    //     backgroundColor: "#ffffff",
+    //     icon: "./src/favicon.png", // must be provided like 'src/favicon.png'
+    //     shortName: "Surface Magic", // Optional
+    //     description: "Surface Magic are Ireland's Number One Surface Repair", // Optional
+    //     categories: ["development"], // Optional
+    //     lang: "en-GB", // Optional
+    //     dir: "auto", // Optional
+    //     maskableIcon: true, // Optional
+    //     gcmSenderId: undefined, // Optional
+    //     msTileColor: "#25508c", // Optional
+    //     appleMaskIcon: "src/favicon.png", // Optional
+    //     appleMaskIconColor: "#25508c", // Optional
+    //   },
+    // },
   ],
   templates: {
     WordPressPost: "/post/:slug",
