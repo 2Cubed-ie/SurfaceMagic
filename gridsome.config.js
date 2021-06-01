@@ -40,17 +40,6 @@ module.exports = {
       },
     },
     { use: "gridsome-plugin-tailwindcss" },
-    // {
-    //   use: "@noxify/gridsome-plugin-remote-image",
-    //   options: {
-    //     original: true,
-    //     typeName: "WordPressAttachment",
-    //     sourceField: "sourceUrl",
-    //     targetField: "downloaded",
-    //     targetPath: "./images/remoteImages",
-    //   },
-    // },
-
     {
       use: "gridsome-plugin-pwa",
       options: {
@@ -58,9 +47,7 @@ module.exports = {
         disableServiceWorker: false,
         serviceWorkerPath: "service-worker.js",
         cachedFileTypes: "js,json,css,html,png,jpg,jpeg,svg,gif",
-        disableTemplatedUrls: false, // Optional
-
-        // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
+        disableTemplatedUrls: true, // Optional
         manifestPath: "manifest.json",
         title: "Surface Magic",
         startUrl: "/",
@@ -76,14 +63,7 @@ module.exports = {
         dir: "auto", // Optional
         maskableIcon: true, // Optional
         gcmSenderId: undefined, // Optional
-
-        // Standard Meta Tags
-        // svgFavicon: 'favicon.svg', // Optional. Requires favicon.ico fallback
-
-        // Microsoft Windows Meta Tags
         msTileColor: "#25508c", // Optional
-
-        // Apple MacOS Meta Tags
         appleMaskIcon: "src/favicon.png", // Optional
         appleMaskIconColor: "#25508c", // Optional
       },
