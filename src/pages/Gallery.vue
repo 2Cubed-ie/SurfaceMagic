@@ -15,15 +15,10 @@
       <h4 class="max-w-md mb-8 text-3xl font-semibold text-primary-dark">
         A Collection Of Images From Recent Projects
       </h4>
-      <p class="max-w-4xl mb-8 text-gray-700">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+      <p
+        class="max-w-4xl mb-8 text-gray-700"
+        v-html="$static.wordPressPage.content"
+      ></p>
 
       <ul class="grid gap-8 my-20 grid-col-2 md:grid-cols-3 lg:grid-cols-4">
         <li
@@ -51,6 +46,7 @@ query {
   wordPressPage(id: "18"){
     yoastHead
     title
+    content
     featuredMedia{
       downloaded
     }
