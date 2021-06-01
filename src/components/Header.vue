@@ -11,7 +11,7 @@
           title="Surface Magic Logo"
         />
       </g-link>
-      <div class="flex flex-wrap justify-end">
+      <div class="flex flex-wrap justify-end flex-1">
         <SmallNav class="hidden md:flex text-primary" />
         <Nav />
       </div>
