@@ -51,7 +51,7 @@ module.exports = {
         screenshots: [
           // Optional
           {
-            src: ".src/screenshot.jpg",
+            src: "src/screenshot.jpg",
             sizes: "1280x720",
             type: "image/jpg",
           },
