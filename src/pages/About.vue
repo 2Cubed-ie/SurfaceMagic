@@ -75,7 +75,34 @@
 </template>
 
 <static-query>
-srcSet
+query {
+  wordPressPage(id: "12"){
+    yoastHead
+    title
+    content
+    featuredMedia{
+      downloaded
+    }
+    acf{
+      subTitle
+      mainImage{
+        downloaded (width: 580, height: 637, quality: 95)
+      	altText
+      }
+      teamImage{
+        downloaded (width: 1140, height: 445, quality: 95)
+      	altText
+      }
+      sectors {
+        subTitle
+        content
+        image{
+          downloaded (width: 580, height: 604, quality: 95)
+        }
+      }
+    }
+  }
+}
 </static-query>
 
 <script>
