@@ -1,9 +1,9 @@
 <template>
   <section class="text-white block-bg">
     <div
-      class="container flex flex-col items-center gap-4 py-12  md:flex-row justify-evenly"
+      class="container flex flex-col items-center gap-4 py-12 md:flex-row justify-evenly"
     >
-      <div class="flex items-start max-w-xs mb-8 md:m-0">
+      <div class="flex items-center max-w-xs mb-8 md:m-0">
         <svg
           class="mr-8 md:mr-4"
           xmlns="http://www.w3.org/2000/svg"
@@ -22,10 +22,9 @@
         </svg>
         <div>
           <h3 class="font-bold tracking-wide">Save Time</h3>
-          <p class="text-sm">Lorum ipsum text to go here until final content</p>
         </div>
       </div>
-      <div class="flex items-start max-w-xs mb-8 md:m-0">
+      <div class="flex items-center max-w-xs mb-8 md:m-0">
         <svg
           class="mr-8 md:mr-4"
           xmlns="http://www.w3.org/2000/svg"
@@ -44,10 +43,9 @@
         </svg>
         <div>
           <h3 class="font-bold tracking-wide">Save Money</h3>
-          <p class="text-sm">Lorum ipsum text to go here until final content</p>
         </div>
       </div>
-      <div class="flex items-start max-w-xs">
+      <div class="flex items-center max-w-xs">
         <svg
           class="mr-8 md:mr-4"
           xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +68,6 @@
         </svg>
         <div>
           <h3 class="font-bold tracking-wide">Save The Enviornment</h3>
-          <p class="text-sm">Lorum ipsum text to go here until final content</p>
         </div>
       </div>
     </div>

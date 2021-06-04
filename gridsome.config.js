@@ -48,6 +48,14 @@ module.exports = {
         serviceWorkerPath: "service-worker.js",
         cachedFileTypes: "js,json,css,html,png,jpg,jpeg,svg,gif,webp",
         disableTemplatedUrls: false, // Optional
+        screenshots: [
+          // Optional
+          {
+            src: ".src/screenshot.jpg",
+            sizes: "1280x720",
+            type: "image/jpg",
+          },
+        ],
 
         // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
         manifestPath: "manifest.json",
