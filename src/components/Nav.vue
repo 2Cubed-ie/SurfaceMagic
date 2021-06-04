@@ -2,7 +2,7 @@
   <div class="w-full">
     <div class="flex items-center justify-end w-full md:justify-between">
       <nav
-        class="flex items-center justify-end w-full text-sm uppercase  main-menu gap-x-4 lg:gap-x-12 text-primary-dark lg:text-base"
+        class="flex items-center justify-end w-full text-sm uppercase main-menu gap-x-4 lg:gap-x-12 text-primary-dark lg:text-base"
         :class="{ 'hide-mobile-menu': !menuIsOpen }"
       >
         <span
@@ -22,7 +22,7 @@
           }}</span>
           <ul v-if="node.childItems.edges.length" class="flex sub-menu">
             <li
-              class="mb-1 md:mb-0"
+              class="mb-1 md:mb-2"
               v-for="sub in node.childItems.edges"
               :key="sub.node.id"
             >
@@ -148,17 +148,17 @@ export default {
 @media (min-width: 768px) {
   .sub-menu {
     @apply shadow-lg flex-col md:absolute bg-white p-8 opacity-0;
-    max-height: 0;
-    transform: scaleY(0);
+    visibility: hidden;
+    transform: translateY(-10px);
     transform-origin: top;
   }
 
   .parent:hover .sub-menu,
   .mobile-open {
     @apply opacity-100;
-    max-height: 1000px;
-    transform: scaleY(1);
-    transition: opacity 200ms ease-out, transform 200ms ease-out;
+    transform: translateY(0);
+    visibility: visible;
+    transition: transform 200ms ease-out, opacity 200ms ease-out;
   }
 }
 </style>
