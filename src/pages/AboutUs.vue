@@ -3,9 +3,9 @@
     <PageTitle
       :pageTitle="$static.wordPressPage.title"
       :style="{
-        'background-image': `url(${
-          $static.wordPressPage.featuredMedia.downloaded.src
-        })`,
+        backgroundImage: this.$static.wordPressPage.featuredMedia
+          ? `url(${this.$static.wordPressPage.featuredMedia.downloaded.src})`
+          : ``,
       }"
       class="bg-cover"
     />
@@ -14,10 +14,9 @@
     <section class="container grid items-center gap-8 my-12 md:grid-cols-2">
       <div>
         <h2 class="mb-2 text-xl font-bold text-primary">ABOUT US</h2>
-        <h3
-          class="max-w-md mb-8 text-3xl font-semibold text-primary-dark"
-          v-html="$static.wordPressPage.acf.subTitle"
-        ></h3>
+        <h3 class="max-w-md mb-8 text-3xl font-semibold text-primary-dark">
+          {{ $static.wordPressPage.acf.subTitle }}
+        </h3>
         <p class="max-w-md mb-8" v-html="$static.wordPressPage.content"></p>
         <p class="text-primary">
           <g-link to="/contact" class="underline">Get in touch today</g-link>,
