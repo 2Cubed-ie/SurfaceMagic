@@ -40,24 +40,13 @@ module.exports = {
       },
     },
     { use: "gridsome-plugin-tailwindcss" },
-    // {
-    //   use: "@noxify/gridsome-plugin-remote-image",
-    //   options: {
-    //     original: true,
-    //     typeName: "WordPressAttachment",
-    //     sourceField: "sourceUrl",
-    //     targetField: "downloaded",
-    //     targetPath: "./images/remoteImages",
-    //   },
-    // },
-
     {
       use: "gridsome-plugin-pwa",
       options: {
         // Service Worker Options
         disableServiceWorker: false,
         serviceWorkerPath: "service-worker.js",
-        cachedFileTypes: "js,json,css,html,png,jpg,jpeg,svg,gif",
+        cachedFileTypes: "js,json,css,html,png,jpg,jpeg,svg,gif,webp",
         disableTemplatedUrls: false, // Optional
 
         // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
