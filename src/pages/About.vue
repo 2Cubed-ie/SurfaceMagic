@@ -11,7 +11,7 @@
     />
 
     <!-- ABOUT US  -->
-    <!-- <section
+    <section
       v-if="$static.wordPressPage.acf"
       class="container grid items-center gap-8 my-12 md:grid-cols-2"
     >
@@ -35,7 +35,7 @@
         :alt="$static.wordPressPage.acf.mainImage.altText"
         :title="$static.wordPressPage.acf.mainImage.altText"
       />
-    </section> -->
+    </section>
 
     <!-- MEET THE TEAM  -->
     <section v-if="$static.wordPressPage.acf" class="py-20 my-24 bg-light">
@@ -75,34 +75,7 @@
 </template>
 
 <static-query>
-query {
-  wordPressPage(id: "12"){
-    yoastHead
-    title
-    content
-    featuredMedia{
-      downloaded
-    }
-    acf{
-      subTitle
-      mainImage{
-        downloaded (width: 580, height: 637, quality: 95)
-      	altText
-      }
-      teamImage{
-        downloaded (width: 1140, height: 445, quality: 95)
-      	altText
-      }
-      sectors {
-        subTitle
-        content
-        image{
-          downloaded (width: 580, height: 604, quality: 95)
-        }
-      }
-    }
-  }
-}
+srcSet
 </static-query>
 
 <script>
