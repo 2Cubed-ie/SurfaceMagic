@@ -3,7 +3,9 @@
     <PageTitle
       :pageTitle="$static.wordPressPage.title"
       :style="{
-        'background-image': `url(${$static.wordPressPage.featuredMedia.downloaded.src})`,
+        'background-image': `url(${
+          $static.wordPressPage.featuredMedia.downloaded.src
+        })`,
       }"
       class="bg-cover"
     />
@@ -22,7 +24,11 @@
           you won’t know if you don’t ask.
         </p>
       </div>
-      <g-image src="~/assets/images/surface-repair.jpg"></g-image>
+      <GImage
+        :src="$static.wordPressPage.acf.mainImage.downloaded"
+        :alt="$static.wordPressPage.acf.mainImage.altText"
+        :title="$static.wordPressPage.acf.mainImage.altText"
+      />
     </section>
 
     <!-- MEET THE TEAM  -->
@@ -82,6 +88,10 @@ query {
       downloaded
     }
     acf{
+      mainImage{
+        downloaded (width: 580, height: 637, quality: 95)
+      	altText
+      }
       teamImage{
         downloaded (width: 1140, height: 445, quality: 95)
       	altText
