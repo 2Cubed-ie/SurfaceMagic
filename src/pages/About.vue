@@ -20,11 +20,11 @@
         <h3 class="max-w-md mb-8 text-3xl font-semibold text-primary-dark">
           {{ $static.wordPressPage.acf.subTitle }}
         </h3>
-        <p
+        <div
           class="max-w-md mb-8"
           v-if="$static.wordPressPage.content"
           v-html="$static.wordPressPage.content"
-        ></p>
+        ></div>
         <p class="text-primary">
           <g-link to="/contact" class="underline">Get in touch today</g-link>,
           you won’t know if you don’t ask.
