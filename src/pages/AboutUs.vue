@@ -7,7 +7,7 @@
       }" class="bg-cover" />
 
 		<!-- ABOUT US  -->
-		<section class="container grid items-center gap-8 my-12 md:grid-cols-2 md:my-24">
+		<section class="container grid items-center gap-8 my-12 md:grid-cols-2">
 			<div>
 				<h2 class="mb-2 text-xl font-bold text-primary">ABOUT US</h2>
 				<h3 class="max-w-md mb-8 text-3xl font-semibold text-primary-dark">
@@ -38,7 +38,7 @@
     </section> -->
 
 		<!-- ABOUT US  -->
-		<section class="container grid items-center gap-8 my-12 md:grid-cols-2 md:my-24">
+		<section class="container grid items-center gap-8 my-12 md:grid-cols-2">
 			<GImage :src="$static.wordPressPage.acf.sectors.image.downloaded" :alt="$static.wordPressPage.acf.sectors.image.altText" :title="$static.wordPressPage.acf.sectors.image.altText" />
 			<div class="md:pl-12">
 				<h2 class="mb-2 text-xl font-bold text-primary">SECTORS</h2>
