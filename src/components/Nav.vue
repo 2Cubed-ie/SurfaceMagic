@@ -8,8 +8,8 @@
             node.label
           }}</span>
 					<ul v-if="node.childItems.edges.length" class="flex sub-menu">
-						<li class="mb-1 md:mb-3" v-for="sub in node.childItems.edges" :key="sub.node.id">
-							<g-link @click="menuIsOpen = false" class="font-light md:text-base md:whitespace-nowrap" :to="`${sub.node.path}`">{{ sub.node.label }}</g-link>
+						<li class="mb-1 md:mb-2.5" v-for="sub in node.childItems.edges" :key="sub.node.id">
+							<g-link @click="menuIsOpen = false" class="md:text-base md:whitespace-nowrap" :to="`${sub.node.path}`">{{ sub.node.label }}</g-link>
 						</li>
 					</ul>
 				</span>
@@ -76,6 +76,9 @@ export default {
 .main-menu a {
 	@apply font-semibold;
 }
+.main-menu .sub-menu a {
+	@apply font-normal;
+}
 .main-menu .active--exact,
 .main-menu a:hover {
 	@apply text-primary;
@@ -121,7 +124,7 @@ export default {
 }
 @media (min-width: 768px) {
 	.sub-menu {
-		@apply shadow-lg flex-col md:absolute bg-white p-8 opacity-0;
+		@apply shadow-lg flex-col md:absolute bg-white p-8 pb-4 opacity-0 rounded -left-8;
 		visibility: hidden;
 		transform: translateY(-10px);
 		transform-origin: top;
