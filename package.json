@@ -4,7 +4,8 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@noxify/gridsome-plugin-remote-image": "^1.4.0",
@@ -22,6 +23,7 @@
     "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
-    "gridsome-plugin-windicss": "^1.0.5"
+    "gridsome-plugin-windicss": "^1.0.5",
+    "patch-package": "^6.4.7"
   }
 }
