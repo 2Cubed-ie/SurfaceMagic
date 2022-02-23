@@ -1,15 +1,29 @@
 <template>
 	<div class="w-full">
 		<div class="flex items-center justify-end w-full md:justify-between">
-			<nav class="flex items-center justify-end w-full text-sm uppercase main-menu gap-x-4 lg:gap-x-12 text-primary-dark lg:text-base" :class="{ 'hide-mobile-menu': !menuIsOpen }">
-				<span class="relative text-center md:text-left" v-for="{ node } in menu" :key="node.key" :class="{ parent: node.childItems.edges.length }">
+			<nav
+				class="flex items-center justify-end w-full text-sm uppercase main-menu gap-x-4 lg:gap-x-12 text-primary-dark lg:text-base"
+				:class="{ 'hide-mobile-menu': !menuIsOpen }"
+			>
+				<span
+					class="relative text-center md:text-left"
+					v-for="{ node } in menu"
+					:key="node.key"
+					:class="{ parent: node.childItems.edges.length }"
+				>
 					<g-link v-if="node.path != '?'" class="inline-block" :to="`${node.path}`">{{ node.label }}</g-link>
-					<span v-else class="inline-block mb-4 font-semibold md:mb-0">{{
-            node.label
-          }}</span>
-					<ul v-if="node.childItems.edges.length" class="flex sub-menu">
+					<span v-else class="inline-block mb-4 font-semibold md:mb-0">
+						{{
+							node.label
+						}}
+					</span>
+					<ul v-if="node.childItems.edges.length" class="flex sub-menu" ref="sub-menu">
 						<li class="mb-1 md:mb-2.5" v-for="sub in node.childItems.edges" :key="sub.node.id">
-							<g-link @click="menuIsOpen = false" class="md:text-base md:whitespace-nowrap" :to="`${sub.node.path}`">{{ sub.node.label }}</g-link>
+							<g-link
+								@click="menuIsOpen = false"
+								class="md:text-base md:whitespace-nowrap"
+								:to="`${sub.node.path}`"
+							>{{ sub.node.label }}</g-link>
 						</li>
 					</ul>
 				</span>
@@ -17,7 +31,11 @@
 				<g-link class="button" to="/contact">Contact us</g-link>
 			</nav>
 			<div class="py-4 md:hidden">
-				<MobileMenuToggle class="relative z-50 ml-4" @click.native="menuIsOpen = !menuIsOpen" :menuIsOpen="menuIsOpen" />
+				<MobileMenuToggle
+					class="relative z-50 ml-4"
+					@click.native="menuIsOpen = !menuIsOpen"
+					:menuIsOpen="menuIsOpen"
+				/>
 			</div>
 		</div>
 	</div>
@@ -68,6 +86,27 @@ export default {
 				return item.node.parentDatabaseId == 0
 			})
 		}
+	},
+	mounted() {
+		console.log('MainMenu mounted');
+		this.menuIsOpen = false
+	},
+	watch: {
+		$route(to, from) {
+			const allSubMenus = document.querySelectorAll('.sub-menu')
+			// Hide all submenus 
+			allSubMenus.forEach((subMenu) => {
+				subMenu.classList.add('hidden')
+			})
+
+			setTimeout(() => {
+				// show all sub menus 
+				allSubMenus.forEach((subMenu) => {
+					subMenu.classList.remove('hidden')
+				})
+			}, 300);
+
+		},
 	}
 }
 </script>
@@ -112,8 +151,8 @@ export default {
 		transform: scaleY(1);
 	}
 	.parent:after {
-		content: '';
-		background: url('../assets/images/icons/chevron-down-outline.svg');
+		content: "";
+		background: url("../assets/images/icons/chevron-down-outline.svg");
 		width: 20px;
 		height: 20px;
 		display: inline-block;

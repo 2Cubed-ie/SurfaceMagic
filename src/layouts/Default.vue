@@ -76,12 +76,11 @@ button {
 }
 
 .fade-enter-active {
-  transition: opacity 600ms ease-out, transform 600ms ease-out;
-  will-change: opacity, transform;
+  transition: opacity 300ms ease-out;
+  will-change: opacity;
 }
 
 .fade-enter {
-  /* opacity: 0; */
-  transform: translateY(-8px) scale(1.005);
+  opacity: 0;
 }
 </style>

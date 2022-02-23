@@ -1,5 +1,7 @@
-const colors = require("tailwindcss/colors");
-const defaultTheme = require("tailwindcss/defaultTheme");
+// const colors = require("tailwindcss/colors");
+import colors from 'windicss/colors'
+// const defaultTheme = require("tailwindcss/defaultTheme");
+const typography = require('windicss/plugin/typography')
 module.exports = {
   // darkMode: 'class', // or 'media' or 'class'
   theme: {
@@ -13,10 +15,10 @@ module.exports = {
         xl: "1180px",
       },
     },
-    screens: {
-      xs: "400px",
-      ...defaultTheme.screens,
-    },
+    // screens: {
+    //   xs: "400px",
+    //   ...defaultTheme.screens,
+    // },
     colors: {
       primary: {
         light: "#1aaaed",
@@ -48,9 +50,22 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography")],
-  purge: {
-    enabled: process.env.NODE_ENV === "production",
-    content: ["./src/**/*.{vue,js,ts,jsx,tsx}"],
+  plugins: [typography],
+  scan: {
+    dirs: ['./'],
+    exclude: [
+      'node_modules',
+      '.git',
+      'dist',
+      '.cache',
+      '.temp',
+    ],
   },
+  preflight: {
+    alias: {
+      // add gridsome aliases
+      'g-link': 'a',
+      'g-image': 'img',
+    }
+  }
 };

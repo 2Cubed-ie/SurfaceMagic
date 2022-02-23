@@ -36,7 +36,7 @@ module.exports = {
         },
       },
     },
-    { use: "gridsome-plugin-tailwindcss" },
+    { use: 'gridsome-plugin-windicss' },
     {
       use: "gridsome-plugin-pwa",
       options: {

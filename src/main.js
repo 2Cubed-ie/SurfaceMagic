@@ -5,16 +5,22 @@ import PageTitle from "~/components/PageTitle.vue";
 import DefaultLayout from "~/layouts/Default.vue";
 import { yoastHead } from "../src/mixins/yoastHead";
 import VueLazyLoad from "vue-lazyload";
+import VueSlickCarousel from 'vue-slick-carousel'
+
+
+
 
 export default function (Vue, { router, head, isClient, appOptions }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
   Vue.component("PageTitle", PageTitle);
 
+  
   // Vue.use(VueFuse);
   // if (isClient) {
-  // }
-  if (isClient) {
+    // }
+    if (isClient) {
+    Vue.component('VueSlickCarousel', VueSlickCarousel)
     Vue.use(VueLazyLoad);
   }
 
