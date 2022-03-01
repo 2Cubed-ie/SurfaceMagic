@@ -1,0 +1,21 @@
+diff --git a/node_modules/gridsome/app/components/Image.js b/node_modules/gridsome/app/components/Image.js
+index 7e6c8e7..ea42bbe 100644
+--- a/node_modules/gridsome/app/components/Image.js
++++ b/node_modules/gridsome/app/components/Image.js
+@@ -40,6 +40,8 @@ export default {
+ 
+         attrs.src = isLazy ? dataUri : src
+         attrs.width = size.width
++        attrs.height = size.height
++        
+ 
+         if (isLazy) attrs['data-src'] = src
+         if (srcset.length) attrs[`${isLazy ? 'data-' : ''}srcset`] = Array.isArray(srcset) ? srcset.join(', ') : srcset
+@@ -85,6 +87,7 @@ export default {
+           innerHTML: `` +
+             `<img src="${props.src.src}" class="${stringifyClass(noscriptClassNames)}"` +
+             (attrs.width ? ` width="${attrs.width}"`: '') +
++            (attrs.height ? ` height="${attrs.height}"`: '') +
+             (attrs.alt ? ` alt="${attrs.alt}"` : '') +
+             `>`
+         }
