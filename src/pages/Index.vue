@@ -1,18 +1,24 @@
 <template>
 	<Layout>
-		<section class="relative hero bg-primary-dark">
-			<GImage class="w-full overflow-hidden hero" :src="$static.wordPressPage.featuredMedia.downloaded" :title="$static.wordPressPage.featuredMedia.title" :alt="$static.wordPressPage.featuredMedia.altText" blur="10" fit="cover" />
+		<section class="bg-primary-dark relative hero">
+			<GImage
+				class="w-full overflow-hidden hero"
+				:src="$static.wordPressPage.featuredMedia.downloaded"
+				:title="$static.wordPressPage.featuredMedia.title"
+				:alt="$static.wordPressPage.featuredMedia.altText"
+				blur="10"
+				fit="cover"
+				:immediate="true"
+			/>
 
-			<div class="absolute top-0 flex items-center w-full h-full">
+			<div class="flex h-full w-full top-0 absolute items-center">
 				<div class="container">
-					<div class="w-full max-w-2xl text-white 0 lg:max-w-2xl">
-						<h1 class="mb-2 font-semibold">SURFACE MAGIC</h1>
-						<h2 class="max-w-lg mb-4 text-3xl font-bold md:text-4xl xl:text-5xl">
-							{{ $static.wordPressPage.acf.heroTitle }}
-						</h2>
-						<p class="max-w-lg mb-12">
-							{{ $static.wordPressPage.acf.heroIntro }}
-						</p>
+					<div class="text-white w-full max-w-2xl 0 lg:max-w-2xl">
+						<h1 class="font-semibold mb-2">SURFACE MAGIC</h1>
+						<h2
+							class="font-bold max-w-lg mb-4 text-3xl md:text-4xl xl:text-5xl"
+						>{{ $static.wordPressPage.acf.heroTitle }}</h2>
+						<p class="max-w-lg mb-12">{{ $static.wordPressPage.acf.heroIntro }}</p>
 						<g-link class="text-lg button" to="/contact">Contact Us</g-link>
 					</div>
 				</div>
@@ -23,12 +29,12 @@
 		<IconBanner />
 
 		<!-- ABOUT US  -->
-		<section class="container grid items-center gap-8 my-12 md:grid-cols-2">
+		<section class="container my-12 grid gap-8 items-center md:grid-cols-2">
 			<div>
-				<h3 class="mb-2 text-xl font-bold text-primary">ABOUT US</h3>
-				<h4 class="max-w-md mb-8 text-3xl font-semibold text-primary-dark">
-					Surface Magic Are Experts In Surface Repair
-				</h4>
+				<h3 class="font-bold text-xl text-primary mb-2">ABOUT US</h3>
+				<h4
+					class="font-semibold max-w-md text-primary-dark mb-8 text-3xl"
+				>Surface Magic Are Experts In Surface Repair</h4>
 				<p class="max-w-md mb-8">
 					Surface Magic are Ireland’s No.1 surface repair company. Our
 					specialist technicians have the ability to repair many types of
@@ -38,29 +44,35 @@
 				</p>
 				<g-link to="/about-us" class="button">Find Out More</g-link>
 			</div>
-			<GImage src="~/assets/images/about.jpg" width="558" height="454" alt="Window repairs" quality="95" />
+			<GImage
+				src="~/assets/images/about.jpg"
+				width="558"
+				height="454"
+				alt="Window repairs"
+				quality="95"
+			/>
 		</section>
 
 		<!-- SERVICES -->
-		<section class="px-4 py-20 text-center bg-light">
-			<h3 class="mb-12 text-3xl font-bold text-primary-dark">Our Services</h3>
+		<section class="bg-light text-center py-20 px-4">
+			<h3 class="font-bold text-primary-dark mb-12 text-3xl">Our Services</h3>
 			<ServiceCards />
 			<g-link to="/services" class="mt-12 button">View All Services</g-link>
 		</section>
 
 		<!-- OUR CLIENTS  -->
 		<section class="container my-24 text-center">
-			<h3 class="mb-12 text-3xl font-bold text-primary-dark">Our Clients</h3>
+			<h3 class="font-bold text-primary-dark mb-12 text-3xl">Our Clients</h3>
 			<ClientLogos />
 		</section>
 
 		<!-- GET IN TOUCH  -->
-		<section class="container grid items-center gap-8 my-12 mb-32 md:grid-cols-2">
+		<section class="container my-12 mb-32 grid gap-8 items-center md:grid-cols-2">
 			<div>
-				<h3 class="mb-2 text-xl font-bold text-primary">GET IN TOUCH</h3>
-				<h4 class="max-w-md mb-8 text-3xl font-semibold text-primary-dark">
-					Book Your Professional Property Repairs Today
-				</h4>
+				<h3 class="font-bold text-xl text-primary mb-2">GET IN TOUCH</h3>
+				<h4
+					class="font-semibold max-w-md text-primary-dark mb-8 text-3xl"
+				>Book Your Professional Property Repairs Today</h4>
 				<p class="max-w-md mb-8">
 					Surface Magic are a trusted & professional company with a great
 					reputation to uphold in the trades business. We are vat registered and
