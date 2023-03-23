@@ -23,8 +23,8 @@
       </div>
       <div class="w-1/2 mb-12 md:w-auto">
         <address class="not-italic">
-          Ballysop, <br />
-          Whitechurch, <br />
+          <!-- Ballysop, <br />
+          Whitechurch, <br /> -->
           New Ross, <br />
           Wexford
         </address>
