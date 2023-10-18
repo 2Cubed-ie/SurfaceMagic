@@ -1,5 +1,6 @@
 require('dotenv').config()
-const fetch = require('node-fetch')
+// const fetch = require('node-fetch')
+const fetch = (await import('node-fetch')).default;
 const TOKEN = Buffer.from(
   `${process.env.ADMIN_USERNAME}:${process.env.ADMIN_PASSWORD}`
 ).toString('base64')
