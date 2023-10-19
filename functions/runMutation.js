@@ -6,11 +6,9 @@ const TOKEN = Buffer.from(
 
 exports.handler = async function (event, context, callback) {
   const fetch = (await import('node-fetch')).default; // Use dynamic import
-  console.log(event.httpMethod, 'event.httpMethod');
   // Only allow POST requests
   if (event.httpMethod !== 'POST' || !event.body) {
-    console.log(`Received ${event.httpMethod} request.`);
-    return { statusCode: 405, body: 'Method Not Allowed' }
+    return { statusCode: 405, body: `${event.httpMethod} Method Not Allowed` }
   }
 
   let session = event.headers['woo-session']
