@@ -1,11 +1,11 @@
 require('dotenv').config()
-const fetch = require('node-fetch')
+// const fetch = require('node-fetch')
 const TOKEN = Buffer.from(
   `${process.env.ADMIN_USERNAME}:${process.env.ADMIN_PASSWORD}`
 ).toString('base64')
 
 exports.handler = async function (event, context, callback) {
-  // const fetch = (await import('node-fetch')).default; // Use dynamic import
+  const fetch = (await import('node-fetch')).default; // Use dynamic import
   // Only allow POST requests
   if (event.httpMethod !== 'POST' || !event.body) {
     return { statusCode: 405, body: 'Method Not Allowed' }
@@ -20,7 +20,7 @@ exports.handler = async function (event, context, callback) {
       'Content-Type': 'application/json',
       Accept: 'application/json',
       'woocommerce-session': `Session ${session}`,
-      'Authorization': `Basic ${TOKEN}`,
+      // 'Authorization': `Basic ${TOKEN}`,
     },
     body: JSON.stringify({ query }),
   })
