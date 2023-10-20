@@ -35,39 +35,51 @@
 </template>
 
 <script>
-import { runMutation } from '../mixins/runMutation'
 export default {
-	data() {
-		return {
-			formData: {},
-			status: ''
-		}
-	},
-	mixins: [runMutation],
-	methods: {
-		async submitForm() {
-			const formData = JSON.parse(JSON.stringify(this.formData))
-			const emailTemplate = `Name: ${formData.name} <br> Phone Number: ${formData.phone} <br> Message: ${formData.message}`
-
-			const res = await this.runMutation(`mutation {
-        sendEmail(input: { 
-            subject: "Message from Surface Magic", 
-            body: "${emailTemplate}", 
-            replyTo: "${formData.name} <${formData.email}>" 
-            }){
-                message
+  data() {
+    return {
+      formData: {
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
+      },
+      status: '',
+    };
+  },
+  methods: {
+    submitForm() {
+      fetch("/.netlify/functions/submitForm", {
+        method: "POST",
+        body: JSON.stringify(this.formData),
+      })
+        .then((response) => {
+          if (response.ok) {
+            setTimeout(() => {
+              this.$router.push('/success')
+            }, 600)
+          } else {
+            if (response.headers.get("content-type")?.includes("application/json")) {
+              return response.json()
+                .then((errorData) => {
+                  console.error("Error:", errorData);
+                  this.status = "Error: " + errorData.message;
+                })
+                .catch((jsonError) => {
+                  this.status = "JSON parsing error:", jsonError;
+                });
+            } else {
+              this.status = "Non-JSON error response";
             }
-        }`)
-
-			this.status = res.data.data.sendEmail.message
-			if (this.status == 'Email Sent') {
-				setTimeout(() => {
-					this.$router.push('/success')
-				}, 600)
-			}
-		}
-	}
-}
+          }
+        })
+        .catch((fetchError) => {
+          console.error("Fetch error:", fetchError);
+        });
+    },
+  },
+};
 </script>
 
 <style scoped lang="postcss">
