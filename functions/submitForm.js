@@ -17,7 +17,7 @@ exports.handler = async (event, context) => {
 
     const mailOptions = {
       from: 'repairs-webiste@surfacemagic.ie',
-      to: 'artem@2cubed.ie',
+      to: 'repairs@surfacemagic.ie',
       subject: subject,
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
     };
