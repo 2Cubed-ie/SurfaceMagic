@@ -18,7 +18,8 @@
 				</p>
 				<SmallNav class="flex font-semibold text-primary" direction="col" showAddress />
 			</div>
-			<ContactForm />
+			<!-- <ContactForm /> -->
+      <ContactFormZoho />
 		</section>
 	</Layout>
 </template>
@@ -37,11 +38,13 @@ query {
 
 <script>
 import ContactForm from '../components/ContactForm'
+import ContactFormZoho from '../components/ContactFormZoho.vue'
 import SmallNav from '../components/SmallNav'
 export default {
 	components: {
 		ContactForm,
-		SmallNav
+		SmallNav,
+    ContactFormZoho
 	},
 	created() {
 		this.fetchMetaDatas(this.$static.wordPressPage.yoastHead)
